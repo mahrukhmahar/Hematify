@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pinkish">#EF8397</color>
+    <color name="red_dark">#A01D29</color>
+    <color name="red">#CE2547</color>
+    <color name="white_input">#E6EBEE</color>
+    <color name="black_v1">#cad2dd</color>
+    <color name="black_v2">#979ea7</color>
+    <color name="button_color">#C6132D</color>
+    <color name="f2">#F2F2F2</color>
+
+
+</resources>

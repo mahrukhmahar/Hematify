@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f2"
+    tools:context=".DonorSearchActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Search For Donor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_button_red"
+        android:padding="10dp"
+        android:src="@drawable/filter"
+        app:layout_constraintBottom_toBottomOf="@id/search_button"
+        app:layout_constraintEnd_toStartOf="@id/search_button"
+        app:layout_constraintTop_toTopOf="@id/search_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_red"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+     android:layout_marginTop="30dp"
+        android:text="Search Donors"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_heading" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/province_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_field"
+        android:visibility="gone"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_button"
+        app:startIconDrawable="@drawable/outline_location"
+        app:startIconTint="@color/black_v2">
+
+        <!-- AutoCompleteTextView for Province -->
+        <AutoCompleteTextView
+            android:id="@+id/province_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif"
+            android:inputType="none"
+            android:paddingStart="50dp"
+            android:text="Select Province"
+            android:textColor="@color/black_v2"
+            android:textSize="16sp" /> <!-- Optional icon for province -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- City Input (AutoCompleteTextView inside TextInputLayout) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_field"
+        android:visibility="gone"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/province_input_layout"
+        app:startIconDrawable="@drawable/outline_location"
+        app:startIconTint="@color/black_v2">
+
+        <!-- AutoCompleteTextView for City -->
+        <AutoCompleteTextView
+            android:id="@+id/city_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif"
+            android:inputType="none"
+            android:paddingStart="50dp"
+            android:text="Select City"
+            android:textColor="@color/black_v2"
+            android:textSize="16sp" /> <!-- Optional icon for city -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Blood Type Input (AutoCompleteTextView inside TextInputLayout) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/blood_type_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_field"
+        android:visibility="gone"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_input_layout"
+        app:startIconDrawable="@drawable/drop"
+        app:startIconTint="@color/black_v2">
+
+        <!-- AutoCompleteTextView for Blood Type -->
+        <AutoCompleteTextView
+            android:id="@+id/blood_type_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif"
+            android:inputType="none"
+            android:paddingStart="50dp"
+            android:text="Select Blood Type"
+            android:textColor="@color/black_v2"
+            android:textSize="16sp" /> <!-- Optional icon for blood type -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_button" />
+
+    <TextView
+        android:id="@+id/notfound"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="No donors found for the selected location and blood type"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_button" />
+
+
+    <!-- RecyclerView to Display Donors -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donors_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

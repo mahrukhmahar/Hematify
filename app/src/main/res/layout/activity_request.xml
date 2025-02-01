@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFEFE"
+    tools:context=".Request">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEFEFE"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/arrow"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/back"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/profile_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Send Blood Request"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pateint_name_textV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Enter Patient Name:"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_heading" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/pateint_name_textV"
+                android:id="@+id/patientName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/input_field"
+                android:drawableTint="@color/black_v2"
+                android:paddingTop="10dp"
+                android:hint="John Doe"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:drawableStart="@drawable/profile"
+                android:drawablePadding="10dp"/>
+
+
+            <TextView
+                android:id="@+id/phone_no_textV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Enter Phone Number:"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patientName" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/phone_no_textV"
+                android:id="@+id/phone_no"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:hint="03*********"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/input_field"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:drawableStart="@drawable/flag_pakistan"
+                android:drawablePadding="20dp"/>
+
+
+
+            <TextView
+                android:id="@+id/gender_textV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Select Gender:"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phone_no" />
+
+            <!-- Gender (Dropdown using Spinner) -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/gender_spinner"
+                android:background="@drawable/input_field"
+                app:startIconDrawable="@drawable/person"
+                app:startIconTint="@color/black_v2"
+                android:paddingLeft="10dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                app:layout_constraintStart_toStartOf="@id/gender_textV"
+                app:layout_constraintTop_toBottomOf="@id/gender_textV">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:inputType="none"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="50dp"
+                    android:textColor="@color/black_v2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/dob_textV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Select Date:"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gender_textV"
+                app:layout_constraintTop_toBottomOf="@id/phone_no" />
+
+
+            <!-- Date of Birth -->
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/input_field"
+                android:drawableTint="@color/black_v2"
+                android:hint="DD/MM/YY"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_v2"
+                app:layout_constraintBottom_toBottomOf="@id/gender_spinner"
+                app:layout_constraintStart_toStartOf="@+id/dob_textV"
+                app:layout_constraintTop_toTopOf="@id/gender_spinner" />
+
+            <TextView
+                android:id="@+id/reason_textV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Reason: "
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender_spinner" />
+
+
+            <!-- Date of Birth -->
+            <EditText
+                android:id="@+id/reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="your reason... "
+                android:minLines="3"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_v2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reason_textV" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/requestButton"
+                app:layout_constraintTop_toBottomOf="@id/reason"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Send Request"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_button_white"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

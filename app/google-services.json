@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "336166559195",
+    "project_id": "hematify",
+    "storage_bucket": "hematify.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336166559195:android:8090658741e1c624b3dbfe",
+        "android_client_info": {
+          "package_name": "com.hematify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ew2bvPx2F9_tuclFu9r0Vg2Z1k4rMrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

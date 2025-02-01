@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EEFEFE"
+    tools:context=".Register">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EEFEFE"
+    android:paddingBottom="30dp">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/arrow"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/back"
+        android:layout_marginTop="30dp"/>
+
+
+
+
+
+
+
+    <!-- Heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Your Account"
+        android:id="@+id/heading"
+        android:layout_below="@id/back"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please provide accurate information in the fields below to create your account."
+        android:lineSpacingExtra="3dp"
+        android:id="@+id/sub_head"
+        android:layout_below="@id/heading"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black_v2"/>
+
+
+        <!-- First Name -->
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/sub_head"
+            android:layout_margin="20dp"
+            android:hint="First Name"
+            android:paddingLeft="20dp"
+            android:lines="1"
+            android:textColorHint="@color/black_v2"
+            android:background="@drawable/input_field"
+            android:drawableStart="@drawable/person"
+            android:drawableTint="@color/black_v2"
+            android:drawablePadding="15dp"
+            android:textColor="@color/black" />
+
+        <!-- Last Name -->
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/first_name"
+            android:hint="Last Name"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/black_v2"
+            android:drawableStart="@drawable/person"
+            android:drawableTint="@color/black_v2"
+            android:drawablePadding="15dp"
+            android:background="@drawable/input_field"
+            android:textColor="@color/black"/>
+
+    <!--    Email Address-->
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Email Address"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textColorHint="@color/black_v2"
+        android:background="@drawable/input_field"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/email__1_"
+        android:drawableTint="@color/black_v2"
+        android:drawablePadding="15dp"
+        android:layout_below="@id/last_name"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+<!--    Password-->
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black_v2"
+        android:background="@drawable/input_field"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:drawableStart="@drawable/password"
+        android:drawableTint="@color/black_v2"
+        android:drawablePadding="15dp"
+        android:layout_below="@id/emailAddress"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/re_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black_v2"
+        android:background="@drawable/input_field"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/password"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:drawableTint="@color/black_v2"
+        android:drawablePadding="15dp"
+        android:layout_below="@id/password"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <!-- Date of Birth -->
+    <EditText
+        android:id="@+id/dateofB"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Date of Birth"
+        android:drawableStart="@drawable/calendar"
+        android:drawableTint="@color/black_v2"
+        android:drawablePadding="15dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black_v2"
+        android:background="@drawable/input_field"
+        android:textColor="@color/black"
+        android:layout_below="@id/re_password"
+        android:layout_margin="20dp" />
+
+    <!-- Gender (Dropdown using Spinner) -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/gender_spinner"
+        android:background="@drawable/input_field"
+        app:startIconDrawable="@drawable/person"
+        app:startIconTint="@color/black_v2"
+        android:paddingLeft="10dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_below="@id/dateofB">
+
+        <!-- Inside text input layout add an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:inputType="none"
+            android:text="Select Gender"
+            android:fontFamily="sans-serif"
+            android:paddingStart="50dp"
+            android:textColor="@color/black_v2"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Blood Group :"
+        android:id="@+id/blood_group_heading"
+        android:layout_below="@id/gender_spinner"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/opensans_bold"/>
+
+
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="2"
+        android:useDefaultMargins="true"
+        android:id="@+id/bloodTypeGroup"
+        android:layout_margin="20dp"
+        android:layout_below="@id/blood_group_heading"
+        android:alignmentMode="alignMargins"
+        android:rowOrderPreserved="false">
+
+        <!-- Blood Group Buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_a_positive"
+            style="@style/BloodGroupButtonStyle"
+            android:text="A +ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_b_positive"
+            style="@style/BloodGroupButtonStyle"
+            android:text="B +ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_o_positive"
+            style="@style/BloodGroupButtonStyle"
+            android:text="O +ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ab_positive"
+            style="@style/BloodGroupButtonStyle"
+            android:text="AB +ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_a_negative"
+            style="@style/BloodGroupButtonStyle"
+            android:text="A -ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_b_negative"
+            style="@style/BloodGroupButtonStyle"
+            android:text="B -ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_o_negative"
+            style="@style/BloodGroupButtonStyle"
+            android:text="O-ve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ab_negative"
+            style="@style/BloodGroupButtonStyle"
+            android:text="AB -ve" />
+    </GridLayout>
+
+
+
+    <!-- phone No -->
+    <EditText
+        android:id="@+id/phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Phone Number"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black_v2"
+        android:background="@drawable/input_field"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/flag_pakistan"
+        android:drawablePadding="15dp"
+        android:layout_below="@id/bloodTypeGroup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <!-- City -->
+    <!-- Gender (Dropdown using Spinner) -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/province"
+        android:background="@drawable/input_field"
+        app:startIconDrawable="@drawable/outline_location"
+        app:startIconTint="@color/black_v2"
+        android:paddingLeft="10dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:layout_marginBottom="20dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_below="@id/phone_no">
+
+        <!-- Inside text input layout add an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewProvince"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:inputType="none"
+            android:text="Select Province"
+            android:dropDownHeight="200dp"
+            android:dropDownAnchor="@id/province"
+            android:fontFamily="sans-serif"
+            android:paddingStart="50dp"
+            android:textColor="@color/black_v2"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/city"
+        android:visibility="gone"
+        android:background="@drawable/input_field"
+        app:startIconDrawable="@drawable/outline_location"
+        app:startIconTint="@color/black_v2"
+        android:paddingLeft="10dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/province">
+
+        <!-- Inside text input layout add an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewCity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dropDownHeight="200dp"
+            android:textSize="18sp"
+            android:inputType="none"
+            android:text="Select City"
+            android:dropDownAnchor="@id/city"
+            android:fontFamily="sans-serif"
+            android:paddingStart="50dp"
+            android:textColor="@color/black_v2"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--    &lt;!&ndash; Full Address &ndash;&gt;-->
+
+
+
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/progressBar"
+    android:visibility="gone"
+    android:layout_marginBottom="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/city"
+    />
+
+    <!-- Submit Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button_white"
+        android:text="Sign Up"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+    <!-- Submit Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button_white"
+        android:text="Resend Verfication Email"
+        android:visibility="gone"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@id/resend"
+        android:id="@+id/termsAndConditions"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By sign up, you agree our! "
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="@string/terms_and_conditions"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@id/termsAndConditions"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account! "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_register_now"
+            android:textColor="@color/red"
+            android:text=" Login"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>

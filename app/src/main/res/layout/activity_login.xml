@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="#EEFEFE">
+
+    <!-- Login Title -->
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Sign In Your Account"
+        android:textColor="@color/button_color"
+        android:textSize="26sp" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/emailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Your Email :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/emailAddress"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:background="@drawable/input_field"
+        android:hint="username@gmail.com"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#C1BFBF" />
+
+    <!-- Password Label -->
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_email"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Password :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/password"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:background="@drawable/input_field"
+        android:hint="******"
+        android:inputType="textPassword"
+        android:fontFamily="@font/opensans_semibold"
+        android:paddingLeft="15dp"
+        android:textColorHint="#C1BFBF" />
+
+
+        <TextView
+            android:id="@+id/beforebutton"
+            android:layout_below="@id/input_password"
+            android:layout_marginRight="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="16sp"
+            android:text="Forgot Password?"
+            android:textColor="@color/button_color"
+            android:textStyle="bold"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/beforebutton" />
+
+    <!-- Login Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button_white"
+        android:text="Login"
+        android:textColor="@color/white"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account! "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_register_now"
+            android:textColor="@color/button_color"
+            android:text="Register Now"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+</RelativeLayout>
